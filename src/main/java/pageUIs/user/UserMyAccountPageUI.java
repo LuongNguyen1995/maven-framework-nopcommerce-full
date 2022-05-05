@@ -20,5 +20,14 @@ public class UserMyAccountPageUI {
     public static final String REVIEW_TITLE = "xpath=//div[@class='review-title']/strong";
     public static final String REVIEW_TEXT_DETAIL = "xpath=//div[@class='review-text']";
     public static final String REVIEW_PRODUCT_NAME = "xpath=//span[@class='user']/a";
+    public static final String ORDER_MY_ORDER_NUMBER = "xpath=//div[@class='section order-item']//strong";
+    public static final String ORDER_DETAIL_BUTTON = "xpath=//strong[text()='Order Number: %s']/parent::div/following-sibling::div/button[text()='Details']";
+    public static final String ORDER_OVER_VIEW_TEXT = "xpath=//div[@class='order-overview']";
+    public static final String ORDER_PRODUCT_NAME_TEXT = "xpath=//td[@class='product']//a";
+    public static final String ORDER_GIFT_WRAPPING_TEXT = "xpath=//div[@class='selected-checkout-attributes']";
+    public static final String ORDER_TOTAL_INFOR_CART_TEXT_BY_NAME = "xpath=//label[text()='%s']/parent::td/following-sibling::td/span";
 
+    public static final String CONFIRM_ORDER_PAYMENT_STATUS_TEXT = "xpath=//li[@class='payment-method-status']/span[@class='value']";
+    public static final String CONFIRM_ORDER_SHIPPING_STATUS_TEXT = "xpath=//li[@class='shipping-status']/span[@class='value']";
+    public static final String CONFIRM_ORDER_REORDER_BUTTON = "xpath=//button[text()='Re-order']";
 }

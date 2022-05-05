@@ -10,7 +10,6 @@ public class EdgeDriverManager implements BrowserFactory{
     public WebDriver getBrowserDriver() {
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
-
         return new EdgeDriver(options);
     }
 }

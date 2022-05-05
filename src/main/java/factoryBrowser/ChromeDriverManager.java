@@ -23,6 +23,7 @@ public class ChromeDriverManager implements BrowserFactory{
         options.addArguments("--disable-geolocation");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-infobars");
+        options.addArguments("start-maximized");
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("credentials_enable_service", false);

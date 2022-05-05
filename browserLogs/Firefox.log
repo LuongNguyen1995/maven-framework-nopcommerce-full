@@ -1,0 +1,20 @@
+1651743630947	geckodriver	INFO	Listening on 127.0.0.1:11025
+1651743631544	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--width=1920" "--height=1080" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileErOw0V"
+1651743631720	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileErOw0V\\search.json.mozlz4", (void 0)))
+1651743632831	Marionette	INFO	Listening on port 62141
+Read port: 62141
+1651743632890	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.cJom"
+avaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeEconsolerro.warnr:: gRecipeMan LoginReager is cipes: "getRencipes: fualllling back 
+to a syncJhavroaScript enous messagerror fo: rer:" "httpss://ourcedem://o.nogre/mopcomdules/merce.coLogim"
+nManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synJavcahroScript error: resourcen://ogre/modules/Luso message foginr:" "httManagerPaps:ren//dtem.o.njsm, line 136: TypeErropcommerce.com"
+or: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronoJuavs mesaScsage for:"rip "htttps: //deerromo.nr: orpcommerce.com"
+esource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synJcavhroanousScrip mests erroarge fo: rer:" "htsourctpse:/:///degrem/moduo.nleopcs/LogoimnManagemerce.comrPa"
+rent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: fallinJavga baScrck iptto  era syror: rnchronousesource:/ message /grfor:"e/mo "https:dules//demo./LogninopcManommageercrPae.crenom"t.j
+sm, line 136: TypeError: gRecipeManager is null

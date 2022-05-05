@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop Commerce" parallel ="false" thread-count="2">
+    <parameter name="envName" value="local" />
+    <parameter name="serverName" value="admin" />
+    <parameter name="ipAddress" value="" />
+    <parameter name="portNumber" value="4444" />
+    <parameter name="osName" value="" />
+    <parameter name="osVersion" value="" />
+
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+<!--        <listener class-name="reportConfig.ExtentManager" />-->
+        <listener class-name="reportConfig.ExtentTestListener" />
+<!--        <listener class-name="reportConfig.ExtentTestManager" />-->
+
+    </listeners>
+    <test name="Run on CHROME">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.nopcommerce.admin.Admin_02_Customer" />
+        </classes>
+    </test>
+
+<!--    <test name="Run on CHROME">-->
+<!--        <parameter name="browser" value="chrome" />-->
+<!--        <classes>-->
+<!--            //<class name="com.nopcommerce.user.User_01_Register" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>

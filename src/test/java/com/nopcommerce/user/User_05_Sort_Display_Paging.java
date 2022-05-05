@@ -70,22 +70,61 @@ public class User_05_Sort_Display_Paging extends BaseTest {
         log.info("Sort 03 - Step 01 : Select sort by Price : Low to High");
         userComputersPage.clickToSelectSortByText("Price: Low to High");
 
-        log.info("Sort 01 - Step 02 : Verify sort by Price : Low to High");
+        log.info("Sort 03 - Step 02 : Verify sort by Price : Low to High");
         verifyTrue(userComputersPage.isProductPriceSortAscending());
     }
 
     @Test
     public void Sort_04_Price_High_To_Low(){
-        log.info("Sort 03 - Step 01 : Select sort by Price: High to Low");
+        log.info("Sort 04 - Step 01 : Select sort by Price: High to Low");
         userComputersPage.clickToSelectSortByText("Price: High to Low");
 
-        log.info("Sort 01 - Step 02 : Verify sort by Price: High to Low");
+        log.info("Sort 04 - Step 02 : Verify sort by Price: High to Low");
         verifyTrue(userComputersPage.isProductPriceSortDescending());
     }
 
+    @Test
+    public void Sort_05_Display_3_Pages(){
+        log.info("Display 05 - Step 01 : Select 3 products/page");
+        userComputersPage.clickToSelectDisplayPerPage("3");
 
+        log.info("Display 05 - Step 02 : Verify 3 products or less than 3 products");
+        verifyTrue(userComputersPage.isTotalProductInThisPage(3));
 
+        log.info("Display 05 - Step 03 : Verify button Next page when current page : 1");
+        verifyTrue(userComputersPage.isNextButtonDisplayedWhenPageAt("1"));
 
+        log.info("Display 05 - Step 04 : Verify button Previos page when current page : 2");
+        verifyTrue(userComputersPage.isPreviosButtonDisplayedWhenPageAt("2"));
+
+    }
+
+    @Test
+    public void Sort_06_Display_6_Pages(){
+        log.info("Display 06 - Step 01 : Select 6 products/page");
+        userComputersPage.clickToSelectDisplayPerPage("6");
+
+        log.info("Display 06 - Step 02 : Verify 6 products or less than 6 products");
+        verifyTrue(userComputersPage.isTotalProductInThisPage(6));
+
+        log.info("Display 06 - Step 03 : Verify Not display Next button,previos button");
+        verifyTrue(userComputersPage.isNotDisplayedNextButton());
+        verifyTrue(userComputersPage.isNotDisplayedPreviosButton());
+
+    }
+
+    @Test
+    public void Sort_07_Display_9_Pages(){
+        log.info("Display 07 - Step 01 : Select 9 products/page");
+        userComputersPage.clickToSelectDisplayPerPage("9");
+
+        log.info("Display 06 - Step 02 : Verify 9 products or less than 9 products");
+        verifyTrue(userComputersPage.isTotalProductInThisPage(9));
+
+        log.info("Display 06 - Step 03 : Verify Not display Next button, previos button");
+        verifyTrue(userComputersPage.isNotDisplayedNextButton());
+        verifyTrue(userComputersPage.isNotDisplayedPreviosButton());
+    }
 
     @AfterClass(alwaysRun = true)
     public void afterClass(){

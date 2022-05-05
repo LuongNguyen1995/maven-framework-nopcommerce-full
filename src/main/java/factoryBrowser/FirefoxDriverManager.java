@@ -1,19 +1,25 @@
 package factoryBrowser;
 
-import commons.GlobalConstants;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import commons.GlobalConstants;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class FirefoxDriverManager implements BrowserFactory{
+
     @Override
     public WebDriver getBrowserDriver() {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-        System.getProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
-        System.getProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.getGlobalConstants().getBrowserLog());
+        System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.getGlobalConstants().getBrowserLog()+File.separator + "Firefox.log" );
 
+        options.addArguments("--width=1920");
+        options.addArguments("--height=1080");
         options.addPreference("browser.download.folderList", 2);
         options.addPreference("browser.download.dir", GlobalConstants.getGlobalConstants().getDownloadFile());
         options.addPreference("browser.download.useDownloadDir", true);
@@ -22,4 +28,5 @@ public class FirefoxDriverManager implements BrowserFactory{
         options.addPreference("pdfjs.disable", true);
         return new FirefoxDriver(options);
     }
+
 }

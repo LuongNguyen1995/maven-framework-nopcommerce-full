@@ -1,0 +1,40 @@
+package pageUIs.admin;
+
+public class AdminCustomersPageUI {
+    public static final String ADD_NEW_BUTTON = "xpath=//a[@class='btn btn-primary']";
+    public static final String SELECT_CUSTOMER_RULE = "xpath=//ul[@id='SelectedCustomerRoleIds_listbox']/li[text()='%s']";
+    public static final String CLICK_CUSTOMER_RULE = "xpath=//select[@id='SelectedCustomerRoleIds']/preceding-sibling::div/input";
+    public static final String TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
+    public static final String CHECKBOX_ACTIVE = "xpath=//input[@id='Active']";
+    public static final String TEXTAREA_ADMIN_COMMENT = "xpath=//textarea[@id='AdminComment']";
+    public static final String SAVE_CONTINUE_BUTTON = "xpath=//button[@name='save-continue']";
+    public static final String SAVE_BUTTON = "xpath=//button[@name='save']";
+    public static final String GENDER_MALE_RADIO = "xpath=//input[@id='Gender_Male']";
+    public static final String GENDER_MALE_CHECKED = "xpath=//input[@id='Gender_Male' and @checked]";
+    public static final String MESSAGE_SUCCESSFULLY = "xpath=//div[@class='alert alert-success alert-dismissable']";
+    public static final String CUSTOMER_ROLES_GUEST_DISPLAY = "xpath=//span[@unselectable='on' and text()='%s']";
+    public static final String CUSTOMER_ROLES_VENDOR_DELETE_BUTTON = "xpath=//span[text()='%s']/following-sibling::span";
+    public static final String BACK_CUSTOMER_LIST_BUTTON = "xpath=//a[text()='back to customer list']";
+    public static final String SEARCH_BUTTON = "xpath=//button[@id='search-customers']";
+    public static final String TEXT_INFO_DISPLAY = "xpath=//td[text()='%s']";
+    public static final String EMAIL_SEARCH = "xpath=//input[@id='SearchEmail']";
+    public static final String FIRSTNAME_SEARCH = "xpath=//input[@id='SearchFirstName']";
+    public static final String LASTNAME_SEARCH = "xpath=//input[@id='SearchLastName']";
+    public static final String SELECT_DROPDOWN_SEARCH_BY_ID = "xpath=//select[@id='%s']";
+    public static final String EDIT_BUTTON = "xpath=//a[@class='btn btn-default' and contains(@href,'Edit')]";
+    public static final String ADDRESSES_TAB = "xpath=//a[@class='btn btn-default' and contains(@href,'Edit')]";
+    public static final String ADD_NEW_ADDRESS_BUTTON = "xpath=//button[contains(text(),'Add new address')]";
+    public static final String SELECT_DROPDOWN_BY_ID = "xpath=//select[@id='%s']";
+    public static final String SAVE_NEW_ADDRESS_BUTTON = "xpath=//button[contains(text(),'Save')]";
+    public static final String SAVE_EDIT_ADDRESS_BUTTON = "xpath=//button[@name='save']";
+    public static final String BACK_CUSTOMER_DATAIL_BUTTON = "xpath=//a[text()='back to customer details']";
+    public static final String ADDRESS_TABLE_FIRST_NAME = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[1]";
+    public static final String ADDRESS_TABLE_LAST_NAME = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[2]";
+    public static final String ADDRESS_TABLE_EMAIL = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[3]";
+    public static final String ADDRESS_TABLE_PHONE_NUMBER = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[4]";
+    public static final String ADDRESS_TABLE_FAX_NUMBER = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[5]";
+    public static final String ADDRESS_TABLE_ADDRESS = "xpath=//table[@id='customer-addresses-grid']//tr[@class='odd']/td[6]";
+    public static final String ADDRESS_TABLE_EDIT_BUTTON = "xpath=//table[@id='customer-addresses-grid']//i[@class='fas fa-pencil-alt']";
+    public static final String ADDRESS_TABLE_DELETE_BUTTON = "xpath=//table[@id='customer-addresses-grid']//i[@class='far fa-trash-alt']";
+    public static final String ADDRESS_TABLE_EMPTY_DATA = "xpath=//table[@id='customer-addresses-grid']//td[@class='dataTables_empty']";
+}
