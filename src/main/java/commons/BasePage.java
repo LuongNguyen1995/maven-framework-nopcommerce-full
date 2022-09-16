@@ -1,5 +1,6 @@
 package commons;
 
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -320,17 +321,7 @@ public class BasePage {
         }
     }
 
-    public void uncheckToDefaultCheckboxRadio(WebDriver driver, String locatorType, String... dynamicValue) {
-        highlightElement(driver, locatorType, dynamicValue);
-        WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValue));
-        if (element.isSelected()){
-            if (driver.toString().contains("internet explorer")) {
-                clickToElementByJS(driver, getDynamicXpath(locatorType, dynamicValue));
-            } else {
-                element.click();
-            }
-        }
-    }
+
 
     public boolean isElementDisplayed(WebDriver driver, String locatorType) {
         highlightElement(driver, locatorType);
@@ -459,6 +450,27 @@ public class BasePage {
         return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
 
+    public boolean isPageLoadedSuccess(WebDriver driver){
+        WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+
+            @Override
+            public Boolean apply(WebDriver driver) {
+                return (Boolean) jsExecutor.executeScript("return (window.jQuery != null) && (jQuery.active ===0)");
+            }
+        };
+
+        ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+
+            @Override
+            public Boolean apply( WebDriver driver) {
+                return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+            }
+        };
+        return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
+    }
+
     public boolean isJQueryAjaxLoadedSuccess(WebDriver driver){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -545,6 +557,8 @@ public class BasePage {
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValue))));
     }
+
+
 
 
     public void openSubMenuPageByText(WebDriver driver, String pageName, String subMenuPageName) {
